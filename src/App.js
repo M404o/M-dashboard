@@ -33,7 +33,7 @@ function App() {
   })
 
   // ローカルストレージからデータを読み込み
-useEffect() {
+useEffect()= {
     const saved = localStorage.getItem('emailTracker');
     if (saved) {
       setCompanies(JSON.parse(saved));
