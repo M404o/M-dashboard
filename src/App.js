@@ -9,6 +9,17 @@ function App() {
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [activeTab, setActiveTab] = useState('basic');
   const [formData, setFormData] = useState({
+    // 既存の state の下に追加
+  const [activeMainTab, setActiveMainTab] = useState('dashboard');
+  const [selectedTemplate, setSelectedTemplate] = useState(null);
+  const [showCopyNotification, setShowCopyNotification] = useState(false);
+  const [templateVars, setTemplateVars] = useState({
+    companyName: '',
+    contactPerson: '',
+    productURL: 'https://mindscape-demo.vercel.app',
+    senderName: 'M',
+    senderPosition: 'Project.M Founder',
+    senderEmail: 'm@example.com',
     name: '',
     sentDate: '',
     emailCount: 1,
@@ -19,10 +30,10 @@ function App() {
     emails: [],
     nextAction: '',
     nextActionDate: ''
-  });
+  })
 
   // ローカルストレージからデータを読み込み
-  useEffect(() => {
+useEffect() {
     const saved = localStorage.getItem('emailTracker');
     if (saved) {
       setCompanies(JSON.parse(saved));
