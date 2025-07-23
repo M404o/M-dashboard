@@ -9,6 +9,17 @@ function App() {
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [activeTab, setActiveTab] = useState('basic');
   const [formData, setFormData] = useState({
+    name: '',
+    sentDate: '',
+    emailCount: 1,
+    status: 'waiting',
+    lastResponse: '',
+    notes: '',
+    strategy: '',
+    emails: [],
+    nextAction: '',
+    nextActionDate: ''
+  });
     // 既存の state の下に追加
   const [activeMainTab, setActiveMainTab] = useState('dashboard');
   const [selectedTemplate, setSelectedTemplate] = useState(null);
