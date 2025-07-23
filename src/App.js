@@ -14,6 +14,46 @@ function App() {
   const [selectedTemplate, setSelectedTemplate] = useState(null);
   const [showCopyNotification, setShowCopyNotification] = useState(false);
   const [templateVars, setTemplateVars] = useState({
+  // GPTの6つのテンプレート
+  const emailTemplates = [
+  {
+    id: 1,
+    title: "①Icebreaker型",
+    type: "カジュアル・会話導入型",
+    description: "相手の投稿やWebから入る自然な導入。興味を引く一言付き。",
+    content: `Hi \${templateVars.contactPerson || '[担当者名]'},
+
+I came across \${templateVars.companyName || '[企業名]'}'s recent work on employee engagement and was impressed by your data-driven approach.
+
+I've been developing Mindscape, a diagnostic tool that surfaces pre-burnout signals before they appear in traditional engagement scores. Given \${templateVars.companyName || '[企業名]'}'s focus on actionable insights, I thought it might be relevant.
+
+Would you be open to a brief conversation about how this might complement your current approach?
+
+Best regards,
+\${templateVars.senderName}
+\${templateVars.senderPosition}
+\${templateVars.senderEmail}`
+  },
+  {
+    id: 2,
+    title: "②Problem-aware型",
+    type: "課題前提の提案型",
+    description: "相手の課題を前提にした提案アプローチ",
+    content: `Dear \${templateVars.contactPerson || '[担当者名]'},
+
+\${templateVars.companyName || '[企業名]'} has built an impressive platform for measuring employee engagement. However, I understand that traditional engagement surveys often miss early warning signs of burnout and disengagement.
+
+Mindscape addresses this gap by detecting pre-burnout signals through a 20-question diagnostic that reveals patterns engagement scores typically miss.
+
+Early results show teams using this approach identify at-risk employees ~14 days earlier and see an 11% improvement in retention.
+
+I'd love to explore how this might strengthen \${templateVars.companyName || '[企業名]'}'s existing capabilities.
+
+Warm regards,
+\${templateVars.senderName}
+\${templateVars.senderPosition}`
+  }
+];
     companyName: '',
     contactPerson: '',
     productURL: 'https://mindscape-demo.vercel.app',
