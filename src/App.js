@@ -53,6 +53,97 @@ Warm regards,
 \${templateVars.senderName}
 \${templateVars.senderPosition}`
   }
+},
+  {
+    id: 3,
+    title: "③Use-case提示型",
+    type: "具体事例重視",
+    description: "他社での活用例を主軸に構造で語る",
+    content: `Hello \${templateVars.contactPerson || '[担当者名]'},
+
+I wanted to share a recent case study that might interest \${templateVars.companyName || '[企業名]'}.
+
+A tech company similar to yours implemented our Mindscape diagnostic and discovered that 23% of their "highly engaged" employees were actually showing pre-burnout signals that traditional surveys missed.
+
+By addressing these early indicators, they:
+- Reduced unexpected turnover by 31%
+- Improved team productivity by 18%
+- Enhanced overall employee satisfaction scores
+
+Given \${templateVars.companyName || '[企業名]'}'s commitment to employee experience, I believe this approach could yield similar results for your teams.
+
+Would you be interested in a brief demo?
+
+Best,
+\${templateVars.senderName}
+\${templateVars.senderPosition}`
+  },
+  {
+    id: 4,
+    title: "④Diagnostic案内型",
+    type: "体験導線重視",
+    description: "無理なく体験導線を作る、クッション性あり",
+    content: `Hi \${templateVars.contactPerson || '[担当者名]'},
+
+I hope this finds you well. I've been following \${templateVars.companyName || '[企業名]'}'s innovative work in the employee engagement space.
+
+I'd love to offer you a complimentary assessment using our Mindscape diagnostic - it takes just 5 minutes and reveals insights that traditional engagement surveys often miss.
+
+No strings attached - just genuinely curious to see what patterns emerge for \${templateVars.companyName || '[企業名]'} and whether our findings align with your internal observations.
+
+Try it here: \${templateVars.productURL}
+
+Feel free to share the results with me if you find them interesting, or simply use them for your own insights.
+
+Cheers,
+\${templateVars.senderName}
+Founder, Project.M`
+  },
+  {
+    id: 5,
+    title: "⑤Mutual value型",
+    type: "共創前提・未来志向",
+    description: "価値観の重なりを強調した共創アプローチ",
+    content: `Dear \${templateVars.contactPerson || '[担当者名]'},
+
+\${templateVars.companyName || '[企業名]'}'s mission to help organizations build better cultures deeply resonates with our work at Project.M.
+
+We're both tackling the same fundamental challenge: how to truly understand and support employee wellbeing before problems become crises.
+
+Our Mindscape diagnostic complements traditional engagement tools by detecting the subtle patterns that precede burnout - the signals that surveys often miss but that deeply impact retention and performance.
+
+I believe there could be meaningful synergies between our approaches. Would you be open to exploring how we might collaborate to push the boundaries of what's possible in employee experience?
+
+Looking forward to the conversation,
+\${templateVars.senderName}
+\${templateVars.senderPosition}
+Project.M`
+  },
+  {
+    id: 6,
+    title: "⑥Direct Impact型",
+    type: "即効性重視",
+    description: "今すぐ導入でこれが変わる系。攻め型。",
+    content: `\${templateVars.contactPerson || '[担当者名]'},
+
+Cut to the chase: \${templateVars.companyName || '[企業名]'} could reduce unexpected turnover by 30% within 90 days.
+
+Here's how:
+
+Our Mindscape diagnostic identifies pre-burnout signals 2-3 weeks before they show up in engagement surveys. This early detection allows for targeted interventions that prevent good people from burning out and leaving.
+
+The ROI is immediate:
+- Average cost of replacing one employee: $50,000+
+- Cost of early intervention: <$500
+- Time to see results: 30-60 days
+
+\${templateVars.companyName || '[企業名]'} is already investing heavily in employee experience. This would amplify those investments by catching problems before they become expensive exits.
+
+15-minute call to show you exactly how this works?
+
+\${templateVars.senderName}
+\${templateVars.senderEmail}
+Project.M`    
 ];
     companyName: '',
     contactPerson: '',
